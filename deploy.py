@@ -7,8 +7,7 @@ model = pickle.load(open('savedmodel.sav', 'rb'))
 
 @app.route('/')
 def home():
-    result = ''
-    return render_template('index.html', **locals())
+    return render_template('index.html')
 
 
 @app.route('/predict', methods=['POST', 'GET'])
